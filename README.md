@@ -31,10 +31,16 @@ En la carpeta **src** se encuentra el código desarrollado en el proyecto. Este 
 Para correr el video utilizado como ejemplo simplemente descargar el repositorio como
 
 ```
-git clone git@gitlab.com:grupo-a393729/proyecto.git
+git clone git@gitlab.fing.edu.uy:iboero/grupo1timag.git
+```
+Luego se debe descargar un video de ejemplo a la carpeta data. Para esto correr:
+
+```
+cd grupo1timag/data
+wget https://drive.google.com/file/d/1u6CXcExtsuIQfag4tEmKOvyz540hFRRL/view?usp=sharing
 ```
 
-abrir localmente el archivo ''DeteccionAcrosomal.ipynb'' y correr todas las celdas.
+Finalmente abrir localmente el archivo ''DeteccionAcrosomal.ipynb'' y correr todas las celdas.
 
 En caso que se quiera utilizar otro video, se debe cambiar el hiperparámetro PATH por el camino relativo al nuevo video. 
 
