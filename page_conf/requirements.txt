@@ -1,0 +1,7 @@
+pelican ~= 4.7
+markdown
+typogrify
+BeautifulSoup4
+pybtex
+pelican-render-math
+
