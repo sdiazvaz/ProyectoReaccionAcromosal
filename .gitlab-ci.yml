@@ -1,0 +1,30 @@
+image: python:3.8-alpine
+
+pages:
+  stage: deploy
+  script:
+  - apk add --update --no-cache make subversion
+  - pip install -r page_conf/requirements.txt
+  ##
+  ## Use a custom theme.
+  ## See https://gitlab.com/pages/pelican/-/blob/main/README.md#use-a-custom-theme
+  ##
+  #- svn export https://github.com/getpelican/pelican-themes/trunk/gum /tmp/gum
+  #- pelican-themes --install /tmp/gum
+  - (cd page_conf && make publish)
+  
+  artifacts:
+    paths:
+    - public/
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
+test:
+  stage: test
+  script:
+  # - apk update && apk add make
+  - apk add --update --no-cache make subversion
+  - pip install -r page_conf/requirements.txt
+  - (cd page_conf && make publish)
+  rules:
+    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
