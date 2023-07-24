@@ -5,7 +5,7 @@
 
 Este es el repositorio del proyecto de detección de reacción acrosomal. 
 
-La pagina web del proyecto se puede encontrar [aqui](https://nacho.boero.gitlab.io/proyecto/).
+La pagina web del proyecto se puede encontrar [aqui](https://iboero.pages.fing.edu.uy/grupo1timag/).
 
 
 El proyecto pretende recibir un segmento de video de espermatozoides con la cabeza fijada, los cuales se le agrega progesterona. Esta sustancia provoca que algunos de los esperamtozoides reaccionen. La idea es detectar cuáles de estos espermatozoides reaccionan, de forma de poder hacer un posterior análisis. 
